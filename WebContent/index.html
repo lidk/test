@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>用户中心</title>
+<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+<link title="" href="css/style.css" rel="stylesheet" type="text/css"  />
+<link title="blue" href="css/dermadefault.css" rel="stylesheet" type="text/css"/>
+<link title="green" href="css/dermagreen.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+<link title="orange" href="css/dermaorange.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+<link href="css/templatecss.css" rel="stylesheet" title="" type="text/css" />
+<script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="script/jquery.cookie.js" type="text/javascript"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<nav class="nav navbar-default navbar-mystyle navbar-fixed-top">
+  <div class="navbar-header">
+    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+     <span class="icon-bar"></span> 
+     <span class="icon-bar"></span> 
+     <span class="icon-bar"></span> 
+    </button>
+    <a class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></a> </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="li-border"><a class="mystyle-color" href="#">选排课系统</a></li>
+  
+    </ul>
+    
+    <ul class="nav navbar-nav pull-right">
+      <li class="dropdown li-border"><a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">未登录<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">退出</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">换肤<span class="caret"></span></a>
+        <ul class="dropdown-menu changecolor">
+          <li id="blue"><a href="#">蓝色</a></li>
+          <li class="divider"></li>
+          <li id="green"><a href="#">绿色</a></li>
+          <li class="divider"></li>
+          <li id="orange"><a href="#">橙色</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="down-main">
+  <div class="left-main left-full">
+    <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+    <div class="subNavBox">
+      <div class="sBox">
+       <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">用户登录</span>
+        </div>
+        <ul class="navContent" style="display:block">
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />学生登录</div>
+            <a href="studentLogin.jsp"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">学生登录</span></a> </li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />老师登录</div>
+            <a href="teacherLogin.jsp"><span class="sublist-icon glyphicon glyphicon-envelope"></span><span class="sub-title">老师登录</span></a> </li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />管理员登录</div>
+            <a href="adminLogin.jsp"><span class="sublist-icon glyphicon glyphicon-bullhorn"></span><span class="sub-title">管理员登录</span></a></li>
+        </ul>
+      </div>
+      <div class="sBox">
+        <div class="subNav sublist-up"><span class="title-icon glyphicon glyphicon-chevron-up"></span><span class="sublist-title">学生选课</span></div>
+        <ul class="navContent" style="display:none">
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />查询课程</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">查询课程</span></a></li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />查询课程信息</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">查询课程信息</span></a></li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />选课和退课</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">选课和退课</span></a></li>
+        </ul>
+      </div>
+         <div class="sBox">
+        <div class="subNav sublist-up"><span class="title-icon glyphicon glyphicon-chevron-up"></span><span class="sublist-title">课程管理</span></div>
+        <ul class="navContent" style="display:none">
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />课程查询</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">课程查询</span></a></li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />选课确认</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">选课确认</span></a></li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />排课管理</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">排课管理</span></a></li>
+          <li>
+            <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />其他信息录入</div>
+            <a href="#"><span class="sublist-icon glyphicon glyphicon-user"></span><span class="sub-title">其他信息录入</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="right-product my-index right-full">
+     <div class="container-fluid">
+	   <div class="info-center">
+       
+       <!---title----->
+            <div class="info-title">
+              <div class="pull-left">
+                <p>欢迎登录学生选排课系统！</p>
+              </div>
+              <div class="time-title pull-right">
+                  <div class="year-month pull-left">
+                    <p><label id="week"></label></p>
+                    <p><span id="year"></span><label id="date"></label></p>
+                  </div>
+                  <div class="hour-minute pull-right">
+                     <strong><label id="time"></label></strong>
+                  </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+       </div>			
+	 </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	setInterval(function(){current()},50);//jquery自带方法
+/*换肤*/
+$(".dropdown .changecolor li").click(function(){
+	var style = $(this).attr("id");
+    $("link[title!='']").attr("disabled","disabled"); 
+	$("link[title='"+style+"']").removeAttr("disabled"); 
+
+	$.cookie('mystyle', style, { expires: 7 }); // 存储一个带7天期限的 cookie 
+})
+var cookie_style = $.cookie("mystyle"); 
+if(cookie_style!=null){ 
+    $("link[title!='']").attr("disabled","disabled"); 
+	$("link[title='"+cookie_style+"']").removeAttr("disabled"); 
+} 
+/*左侧导航栏显示隐藏功能*/
+$(".subNav").click(function(){				
+			/*显示*/
+			if($(this).find("span:first-child").attr('class')=="title-icon glyphicon glyphicon-chevron-down")
+			{
+				$(this).find("span:first-child").removeClass("glyphicon-chevron-down");
+			    $(this).find("span:first-child").addClass("glyphicon-chevron-up");
+			    $(this).removeClass("sublist-down");
+				$(this).addClass("sublist-up");
+			}
+			/*隐藏*/
+			else
+			{
+				$(this).find("span:first-child").removeClass("glyphicon-chevron-up");
+				$(this).find("span:first-child").addClass("glyphicon-chevron-down");
+				$(this).removeClass("sublist-up");
+				$(this).addClass("sublist-down");
+			}	
+		// 修改数字控制速度， slideUp(500)控制卷起速度
+	    $(this).next(".navContent").slideToggle(300).siblings(".navContent").slideUp(300);
+	})
+/*左侧导航栏缩进功能*/
+$(".left-main .sidebar-fold").click(function(){
+
+	if($(this).parent().attr('class')=="left-main left-full")
+	{
+		$(this).parent().removeClass("left-full");
+		$(this).parent().addClass("left-off");
+		
+		$(this).parent().parent().find(".right-product").removeClass("right-full");
+		$(this).parent().parent().find(".right-product").addClass("right-off");
+		
+		}
+	else
+	{
+		$(this).parent().removeClass("left-off");
+		$(this).parent().addClass("left-full");
+		
+		$(this).parent().parent().find(".right-product").removeClass("right-off");
+		$(this).parent().parent().find(".right-product").addClass("right-full");
+		
+		}
+	})	
+ 
+  /*左侧鼠标移入提示功能*/
+		$(".sBox ul li").mouseenter(function(){
+			if($(this).find("span:last-child").css("display")=="none")
+			{$(this).find("div").show();}
+			}).mouseleave(function(){$(this).find("div").hide();})	
+})
+function current(){
+		/*设置日期*/
+		var d=new Date();
+		var showDate='';
+		var time='';
+		$("#year").text(d.getFullYear()+"");
+		showDate +=""+'年';
+		
+		intMonth = d.getMonth()+1;
+
+		if(intMonth<10){
+		       intMonth= '0'+intMonth;
+		}
+
+		showDate +=intMonth+'月';
+
+		intDay = d.getDate();
+
+		if(intDay<10){
+
+		       intDay= '0'+intDay;
+
+		}
+
+		showDate +=intDay+'日';
+		$("#date").text(showDate);
+		
+		var week = d.getUTCDay();
+		var showWeek = "";
+		if(week=="1"){
+			showWeek = "星期一";
+		}
+		if(week=="2"){
+			showWeek = "星期二";
+		}
+		if(week=="3"){
+			showWeek = "星期三";
+		}
+		if(week=="4"){
+			showWeek = "星期四";
+		}
+		if(week=="5"){
+			showWeek = "星期五";
+		}
+		if(week=="6"){
+			showWeek = "星期六";
+		}
+		if(week=="0"){
+			showWeek = "星期天";
+		}
+		$("#week").text(showWeek);
+
+		intHour = d.getHours();
+
+		if(intHour<10){
+
+		       intHour= '0'+intHour;
+
+		}
+
+		time +=''+intHour+':';
+
+		intMin = d.getMinutes();
+
+		if(intMin<10){
+
+		       intMin= '0'+intMin;
+
+		}
+		time +=intMin+':';
+
+		intSec = d.getSeconds();
+
+		if(intSec<10){
+
+		       intSec= '0'+intSec;
+
+		}
+
+		time +=intSec;
+		$("#time").text(time);
+	}
+</script>
+</body>
+</html>

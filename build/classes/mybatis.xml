@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration  
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <!-- 对事务的管理和连接池的配置 -->  
+<!--     <environments default="development">   -->
+<!--         <environment id="development">   -->
+<!--             <transactionManager type="JDBC" />   -->
+<!--             <dataSource type="POOLED">   -->
+<!--                 <property name="driver" value="oracle.jdbc.driver.OracleDriver" />   -->
+<!--                 <property name="url" value="jdbc:oracle:thin:@mdm.sunwayworld.com:1523:utf8" />   -->
+<!--                 <property name="username" value="adc_ivdc_dev" />   -->
+<!--                 <property name="password" value="adc_ivdc_dev" />  -->
+<!--                 <property name="poolMaximumIdleConnections" value="0"/> -->
+<!--                 <property name="poolMaximumActiveConnections" value="1000"/> -->
+<!--                 <property name="poolPingQuery" value="SELECT 1 FROM DUAL" />   -->
+<!--                 <property name="poolPingEnabled" value="true" />  -->
+<!--             </dataSource>   -->
+<!--         </environment>   -->
+<!--     </environments>   -->
+    <environments default="development">  
+        <environment id="development">  
+            <transactionManager type="JDBC" />  
+            <dataSource type="POOLED">  
+                <property name="driver" value="com.mysql.jdbc.Driver" />  
+                <property name="url" value="jdbc:mysql://101.204.240.61:3306/test_ldk" />  
+                <property name="username" value="root" />  
+                <property name="password" value="lims" /> 
+                <property name="poolMaximumIdleConnections" value="0"/>
+                <property name="poolMaximumActiveConnections" value="1000"/>
+                <property name="poolPingQuery" value="SELECT 1 FROM DUAL" />  
+                <property name="poolPingEnabled" value="true" /> 
+            </dataSource>  
+        </environment>  
+    </environments>  
+      
+    <!-- mapping 文件路径配置 -->  
+    <mappers>  
+        <mapper resource="com/test/mapper/CustomerMapper.xml" />  
+        <mapper resource="com/test/mapper/EmpMapper.xml" />  
+        <mapper resource="com/test/mapper/HouseMapper.xml" />  
+        <mapper resource="com/test/mapper/TakelookinfoMapper.xml" />  
+        <mapper resource="com/test/mapper/userMapper.xml" />  
+    </mappers>  
+</configuration>

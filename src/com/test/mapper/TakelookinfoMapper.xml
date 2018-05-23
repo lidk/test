@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.dao.TakelookinfoMapper">
+
+
+  <resultMap id="BaseResultMap" type="com.test.entity.Takelookinfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="empid" jdbcType="INTEGER" property="empid" />
+    <result column="customerid" jdbcType="INTEGER" property="customerid" />
+    <result column="houseid" jdbcType="INTEGER" property="houseid" />
+    <association property="emp" javaType="com.test.entity.Emp">
+            <!-- property 表示com.mybatis.bean.Class中的属性； column 表示表中的列名 -->
+            <id property="id" column="id" />
+            <result property="empAge" column="emp_age" />
+            <result property="empDept" column="emp_dept" />
+            <result property="empName" column="emp_name" />
+            <result property="empPost" column="emp_post" />
+            <result property="empSalary" column="emp_salary" />
+    </association>
+    <association property="customer" javaType="com.test.entity.Customer">
+            <id property="id" column="id" />
+            <result property="name" column="name" />
+    </association>
+    <association property="house" javaType="com.test.entity.House">
+            <id property="id" column="id" />
+            <result property="housename" column="housename" />
+    </association>
+  </resultMap>
+  
+  <select id="selectTakeLook" resultMap="BaseResultMap" parameterType="String">
+  		SELECT
+			takelookinfo.id,
+			emp.emp_name,
+			house.housename,
+			customer.NAME 
+		FROM
+			takelookinfo 
+			LEFT JOIN customer  ON takelookinfo.customerid = customer.id
+			LEFT JOIN emp  ON takelookinfo.empid = emp.id
+			LEFT JOIN house  ON takelookinfo.id = house.id 
+		WHERE
+			emp.emp_name = #{empName}
+  </select>
+</mapper>

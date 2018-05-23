@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+ <mapper namespace="com.test.dao.UserDao">  
+  
+      
+    <select id="selectAllUsers" resultType="com.test.entity.User">  
+        select id,name,age from l1t_person   
+    </select>  
+      
+    <insert id="addUser" parameterType="com.test.entity.User">
+    	insert into l1t_person(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+ </mapper> 

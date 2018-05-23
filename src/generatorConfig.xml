@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<generatorConfiguration>
+	<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+<!--             <property name="caseSensitive" value="false"/> -->
+<!--             <property name="forceAnnotation" value="false"/> -->
+             <property name="enableSubPackages" value="true" />  
+            <property name="trimStrings" value="true" />  
+<!--             <property name="beginningDelimiter" value="`"/> -->
+<!--             <property name="endingDelimiter" value="`"/> -->
+        </plugin>
+		<!-- 数据库链接URL、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://101.204.240.61:3306/test_ldk" userId="root"
+			password="lims" />
+		 <!-- 生成模型的包名和位置 ,没特别必要，此处目录不动 -->
+		 
+		<javaModelGenerator targetPackage="com.test.entity"
+			targetProject="test">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+			
+<!-- 		生成的映射文件包名和位置 ,没特别必要，此处目录不动 --> 
+		<sqlMapGenerator targetPackage="com.test.mapper"
+			targetProject="test">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+<!-- 		 生成DAO的包名和位置 ,没特别必要，此处目录不动 --> 
+		<javaClientGenerator targetPackage="com.test.dao" 
+		targetProject="test" type="XMLMAPPER" />
+<!-- 		要对那些数据表进行生成操作，必须要有一个. --> 
+		<table tableName="takelookinfo">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+		</table>
+
+	</context>
+</generatorConfiguration>  

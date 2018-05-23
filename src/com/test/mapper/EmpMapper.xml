@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.dao.EmpMapper">
+  <resultMap id="BaseResultMap" type="com.test.entity.Emp">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="emp_age" jdbcType="INTEGER" property="empAge" />
+    <result column="emp_salary" jdbcType="DOUBLE" property="empSalary" />
+    <result column="emp_dept" jdbcType="VARCHAR" property="empDept" />
+    <result column="emp_post" jdbcType="VARCHAR" property="empPost" />
+  </resultMap>
+</mapper>
